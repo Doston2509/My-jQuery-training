@@ -13,26 +13,29 @@ $(document).ready(function(){
         document.getElementsById("p1").value = "Value is chaged";
     });
     $("#hide").click(function(){
-      $(".wrapper").hide("slow");
+      $(".wrapper").slideUp("slow");
     });
     $("#show").click(function(){
-      $(".wrapper").show("slow");
+      $(".wrapper").slideDown("slow");
     });
     $("#bothBUTTON").click(function(){
-      $(".wrapper").toggle("slow");
+      $(".wrapper").slideToggle("slow");
     });
     $(".first").click(function(){
       $(".wrapper1").toggle("slow");
-    })
+    });
+    $(".startAnimation").click(function(){
+      $("#animating").animate({
+        left: '200px',
+        width: '150px',
+        height: '100px'
+      }, "fast");
+    });
+
 });
 </script>
 </head>
 <body>
-
-
-
-
-
 <!-- ===================== This is place where div will be used ===================================== -->
 <table align="center">
   <tr>
@@ -54,6 +57,14 @@ $(document).ready(function(){
                             <br>
                             <br>
                             <br>
+<!-- ========================== Simple jQuery Animation ========================-->
+<button class="startAnimation">Start Animation</button>
+<br>
+<img id="animating" src="map.jpg" style="width:100px; height:100px; position:absolute;"/>
+                            <br>
+                            <br>
+                            <br>
+<!-- ========================== Simple jQuery Slides ========================-->
 <table align="center">
   <tr>
     <td>
