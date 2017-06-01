@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.2.1.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+$(document).ready(function(){
+    $("#p1").hover(function(){
+        alert("You entered prohebited area!");
+    },
+    function(){
+        alert("Bye! You now leave the area!");
+        document.getElementsById("p1").value = "Value is chaged";
+    });
+    $("#hide").click(function(){
+      $(".wrapper").hide("slow");
+    });
+    $("#show").click(function(){
+      $(".wrapper").show("slow");
+    });
+    $("#bothBUTTON").click(function(){
+      $(".wrapper").toggle("slow");
+    });
+    $(".first").click(function(){
+      $(".wrapper1").toggle("slow");
+    })
+});
+</script>
+</head>
+<body>
+
+
+
+
+
+<!-- ===================== This is place where div will be used ===================================== -->
+<table align="center">
+  <tr>
+    <td><button id="bothBUTTON">Toggle</button>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+    </td>
+  </tr>
+</table>
+
+<p id="hiding" style="text-align:center">If you click hide button, I will disappear and if you click show button I will appear</p>
+<div class="wrapper">
+    <div id="first"></div>
+    <div id="middle"></div>
+    <div id="second"></div>
+    <div id="middle"></div>
+    <div id="third"></div>
+</div>
+                            <br>
+                            <br>
+                            <br>
+<table align="center">
+  <tr>
+    <td>
+      <button class="first">Toggle</button>
+    </td>
+  </tr>
+</table>
+<div class="wrapper1">
+    <div id="birinchi"></div>
+
+    <div id="ikkinchi"></div>
+
+    <div id="uchinchi"></div>
+</div>
+
+<br><br><br>
+
+<!-- ===================== this is beging of mouseenter and mouseleave function ====================== -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<table align="center">
+  <tr>
+    <td><p id="p1">This area for mouseenter and mouseleave jQuery function!</p></td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>
